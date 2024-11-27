@@ -149,10 +149,18 @@ const gamesTieDiv = document.getElementById("games-tie");
 const restartCounterButton = document.getElementById("restart-counter");
 
 function showStatistics() {
-  gamesPlayedDiv.innerHTML = localStorage.getItem("numGames");
-  gamesXDiv.innerHTML = localStorage.getItem("gamesX");
-  gamesODiv.innerHTML = localStorage.getItem("gamesO");
-  gamesTieDiv.innerHTML = localStorage.getItem("tie");
+  gamesPlayedDiv.innerHTML = localStorage.getItem("numGames")
+    ? localStorage.getItem("numGames")
+    : 0;
+  gamesXDiv.innerHTML = localStorage.getItem("gamesX")
+    ? localStorage.getItem("gamesX")
+    : 0;
+  gamesODiv.innerHTML = localStorage.getItem("gamesO")
+    ? localStorage.getItem("gamesO")
+    : 0;
+  gamesTieDiv.innerHTML = localStorage.getItem("tie")
+    ? localStorage.getItem("tie")
+    : 0;
 }
 
 function restartCounter() {
