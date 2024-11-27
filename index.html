@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <script src="tictactoe.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Signika:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>❌⭕ Tres en ratlla</title>
+  </head>
+  <body class="bg-yellow-200">
+    <!-- Taulell del joc -->
+    <div
+      class="container mx-auto justify-center items-center flex flex-col min-h-screen w-[600px]"
+    >
+      <div
+        class="text-white text-5xl font-bold uppercase mb-4 drop-shadow-md bg-one w-full rounded-lg text-center justify-end py-2"
+      >
+        <p class="text-center poppins-semibold">Ta - Te - Ti</p>
+      </div>
+      <div class="flex w-full h-full justify-between flex-wrap">
+        <div
+          class="text-white justify-between grow me-2 roboto-regular flex flex-col"
+        >
+          <div>
+            <div class="statistics-box">
+              <div class="statistics-box-title">Games played</div>
+              <div class="statistics-box-data" id="games-played"></div>
+            </div>
+            <div class="statistics-box">
+              <div class="statistics-box-title">Games won ❌</div>
+              <div class="statistics-box-data" id="games-won-x"></div>
+            </div>
+            <div class="statistics-box">
+              <div class="statistics-box-title">Games won ⭕</div>
+              <div class="statistics-box-data" id="games-won-o"></div>
+            </div>
+            <div class="statistics-box">
+              <div class="statistics-box-title">Ties</div>
+              <div class="statistics-box-data" id="games-tie"></div>
+            </div>
+            <div class="mt-3 text-center text-five">
+              <button
+                id="restart-counter"
+                class="px-2 py-1 hover:bg-five hover:bg-opacity-20 rounded-lg w-full"
+              >
+                Restart counter
+              </button>
+            </div>
+          </div>
+          <div class="mt-6 game-over w-full" id="restart-button">
+            <!-- Missatge de final de partida -->
+            <div class="game-over mb-3">
+              <span class="roboto-regular text-five" id="resultado"></span>
+            </div>
+            <button
+              type="button"
+              class="restart px-4 py-3 bg-four text-white rounded-md text-lg shadow-md hover:bg-opacity-90 w-full poppins-regular"
+            >
+              Restart game
+            </button>
+          </div>
+        </div>
+        <div
+          id="game"
+          class="grid grid-cols-3 grid-rows-3 w-[400px] h-[400px] gap-2 rounded-lg bg-yellow-200"
+        >
+          <div class="box unselected" id="0"></div>
+          <div class="box unselected" id="1"></div>
+          <div class="box unselected" id="2"></div>
+          <div class="box unselected" id="3"></div>
+          <div class="box unselected" id="4"></div>
+          <div class="box unselected" id="5"></div>
+          <div class="box unselected" id="6"></div>
+          <div class="box unselected" id="7"></div>
+          <div class="box unselected" id="8"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden" id="modal">
+      <div
+        class="flex fixed z-10 left-0 top-0 w-full min-h-screen justify-center items-center"
+      >
+        <div
+          class="rounded-3xl bg-three text-white p-10 text-5xl flex justify-center items-center relative left-6"
+          id="modal-message"
+        ></div>
+        <button
+          class="bg-white text-three font-bold p-2 px-4 text-4xl rounded-md relative right-4 -top-12"
+          id="close-modal"
+        >
+          X
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

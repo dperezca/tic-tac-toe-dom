@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .box {
+    @apply border-0 bg-yellow-100 text-5xl flex justify-center items-center rounded-lg
+  }
+
+  .unselected {
+    @apply cursor-pointer hover:bg-opacity-70;
+  }
+
+  .statistics-box {
+    @apply flex justify-between mt-1 gap-0.5
+  }
+
+  .statistics-box-title {
+    @apply bg-four bg-opacity-20 grow rounded-s-md ps-2 py-1 text-five
+  }
+
+  .statistics-box-data {
+    @apply bg-four rounded-e-md pe-3 ps-2 py-1
+  }
+}
+
+/* Pseudo elements */
+.x::after {
+  content: "❌";
+}
+
+.o::after {
+  content: "⭕";
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
